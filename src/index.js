@@ -1,12 +1,27 @@
 /*  eslint-disable no-unused-vars */
 
-import ReactDOM from 'react-dom';
 import React from 'react';
-
-const title = 'My Minimal React Webpack Babel Setup';
+import ReactDOM from 'react-dom';
+import Stream from './components/Stream'
+const tracks = [
+  {
+    title: 'Some track'
+  },
+  {
+    title: 'Some other track'
+  }, {
+    title: 'Some track'
+  },
+  {
+    title: 'Some other track'
+  }
+];
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <Stream
+    tracks={tracks}
+  />,
   document.getElementById('app'),
 );
+
 module.hot.accept();
